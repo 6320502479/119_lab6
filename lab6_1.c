@@ -8,14 +8,18 @@ int main()
     {
         scanf("%s",&word[i]);
     }
-    for(i=0;i<n-1;i++)
+    for(i=0;i<n;i++)
     {
-            if(word[i][0]>word[i+1][0])
+         for (j=i+1;j<n;j++)
+         {
+           if(word[i][0]>word[j][0])
             {
-                strcpy(sort,word[i+1]);
-                strcpy(word[i],word[i+1]);
-                strcpy(word[i],sort);
+                strcpy(sort,word[i]);
+                strcpy(word[i],word[j]);
+                strcpy(word[j],sort);
             }
+         }
+
     }
     for(i=0;i<n;i++)
     {
