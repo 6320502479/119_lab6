@@ -1,10 +1,11 @@
 #include <stdio.h>
-
 int main()
 {
     int n,i,t,f;
     scanf("%d",&n);
-    char num[2][n];
+    if(n>=4&&n<=9)
+    {
+       char num[2][n];
     for(i=0;i<2;i++)
     {
         scanf("%s",num[i]);
@@ -19,4 +20,5 @@ int main()
     f=n-t;
     printf("%d %d",t,f);
     return 0;
+    }
 }
